@@ -1,0 +1,33 @@
+doctype html
+
+block vars
+  - let title = "Exercises"
+  - let relativeRoot = "./"
+
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title= `${title} | The Nature of Code`
+
+    block stylesheets
+      link(rel="stylesheet" href=`${relativeRoot}/global.scss`)
+
+  body
+    include ./components/nav/nav
+
+    header.header
+      block header
+
+    main
+      block content
+
+      article.notes
+        block notes
+          h2 Notes
+
+    footer
+      p All examples are based on exercises from #[i The Nature of Code], © 2012 by Daniel Shiffman.
+
+  block scripts 
+    script(src=`${relativeRoot}/global.js`)

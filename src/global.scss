@@ -1,0 +1,40 @@
+@import "./components/nav/nav";
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  min-height: 100vh;
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  font-size: 0.8rem;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0.5em 0;
+}
+
+.header {
+  padding-top: 32px;
+}

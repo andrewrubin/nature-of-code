@@ -1,0 +1,18 @@
+mixin nav-item(title)
+  li.nav__item
+    a(href=`${title.toLowerCase().replace(/\s/g, "")}.pug`)
+      != title
+
+-
+  const navItems = [
+    "Index",
+    "Exercise 1-1",
+  ]
+
+nav.nav(aria-label="Main navigation")
+  button.nav__toggle(aria-expanded="false")
+    | Toggle exercises 
+    span(aria-hidden="true") &nbsp;>
+  ul#exercises.nav__list
+    each item in navItems
+      +nav-item(item)

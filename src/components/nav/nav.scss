@@ -1,0 +1,12 @@
+.nav {
+  position: relative;
+}
+
+.nav__list {
+  height: 0;
+  overflow: hidden;
+}
+
+[aria-expanded="true"] + .nav__list {
+  height: auto;
+}
