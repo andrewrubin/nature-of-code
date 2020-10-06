@@ -6,4 +6,4 @@
 npm run start
 ```
 
-Then navigate to `localhost:1234/index.html`.
+Then navigate to `localhost:8000/index.html`.
