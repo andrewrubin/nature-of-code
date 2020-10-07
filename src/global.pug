@@ -3,6 +3,7 @@ doctype html
 block vars
   - let title = "Exercises"
   - let relativeRoot = "./"
+  - let pageId = "index"
 
 html(lang="en")
   head
@@ -21,10 +22,13 @@ html(lang="en")
 
     main
       block content
+        .canvas-wrap
+          canvas#canvas.canvas-wrap__canvas
 
-      article.notes
-        block notes
+      block notes
+        article.notes
           h2 Notes
+          block notes_content
 
     footer
       p All examples are based on exercises from #[i The Nature of Code], © 2012 by Daniel Shiffman.

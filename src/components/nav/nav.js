@@ -1,11 +1,14 @@
 const toggle = document.querySelector(".nav__toggle");
+let isOpen = false;
 
 const handleClick = (e) => {
   const target = e.currentTarget,
-    currentValue = target.getAttribute("aria-expanded"),
-    newValue = currentValue === "true" ? "false" : "true";
+    parent = target.closest(".nav");
 
-  target.setAttribute("aria-expanded", newValue);
+  isOpen = !isOpen;
+
+  target.setAttribute("aria-expanded", isOpen);
+  parent.dataset.open = isOpen;
 };
 
 const navInit = () => {

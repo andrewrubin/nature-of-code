@@ -1,18 +1,23 @@
-mixin nav-item(title)
-  li.nav__item
-    a(href=`${title.toLowerCase().replace(/\s/g, "")}.pug`)
-      != title
+mixin nav-item(item)
+  - let { name, id } = item;
+  -
+    let classAttrs = {
+      "nav__item--current": id === pageId
+    };
+
+  li.nav__item(class=classAttrs)
+    a(href=`${id}.pug`)
+      != name
 
 -
   const navItems = [
-    "Index",
-    "Exercise 1-1",
+    { name: "Index", id: "index" },
+    { name: "Exercise 1-1", id: "exercise1-1" },
   ]
 
 nav.nav(aria-label="Main navigation")
-  button.nav__toggle(aria-expanded="false")
-    | Toggle exercises 
-    span(aria-hidden="true") &nbsp;>
-  ul#exercises.nav__list
+  button.nav__toggle(aria-expanded="false") Toggle all exercises 
+  span#exercises-label.visually-hidden Choose exercise
+  ul#exercises.nav__list(aria-labelledby="exercises-label")
     each item in navItems
       +nav-item(item)
