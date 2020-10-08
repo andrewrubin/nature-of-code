@@ -35,3 +35,6 @@ html(lang="en")
 
   block scripts 
     script(src=`${relativeRoot}/global.js`)
+    
+    if pageId !== "index"
+      script(src=`${relativeRoot}/${pageId}.js`)
