@@ -5,6 +5,9 @@ Just following along in the video series: https://youtu.be/6vX8wT1G798.
 ## To build locally:
 
 ```sh
+npm install
+```
+```sh
 npm run start
 ```
 
