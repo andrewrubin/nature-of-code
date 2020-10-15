@@ -83,6 +83,11 @@ p {
   width: 100%;
 }
 
+.field {
+  display: inline-block;
+  margin: 0 24px 32px 0;
+}
+
 .notes,
 footer {
   border-top: 1px solid #d8d8d8;
@@ -91,6 +96,11 @@ footer {
 
 .notes {
   padding-bottom: 64px;
+}
+
+code {
+  background: #e4e4e4;
+  padding: 3px 6px;
 }
 
 .visually-hidden:not(:focus):not(:active) {

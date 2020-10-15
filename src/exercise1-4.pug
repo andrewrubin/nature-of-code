@@ -1,0 +1,30 @@
+extends ./global
+
+append vars
+  - pageId = "exercise1-4"
+
+append header
+  h1
+    span Exercise 1-4:
+    | Probability: controlled distribution of random numbers
+
+append content
+  p Choose distribution:
+
+  .field
+    input(type="radio" id="x" name="equations")
+    label(for="x") y = x
+  .field
+    input(type="radio" id="x2" name="equations" checked)
+    label(for="x2") y = x#[sup 2]
+  .field
+    input(type="radio" id="x3" name="equations")
+    label(for="x3") y = x#[sup 3]
+  .field
+    input(type="radio" id="x4" name="equations")
+    label(for="x4") y = x#[sup 4]
+
+block notes_content
+  p This algorithm takes an equation and distributes random numbers based on it.
+  p If given the linear equation #[code y = x], number distribution will grow linearly.
+  p If given #[code y = x#[sup n]], number distribution will grow exponentially based on #[code n]
